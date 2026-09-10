@@ -12,7 +12,7 @@ int main()
     gpio_set_dir(LED_PIN, GPIO_OUT);
     
     gpio_init(BUTTON_PIN);
-    gpio_set_dir(BUTTON_PIN, GPIO_OUT);
+    gpio_set_dir(BUTTON_PIN, GPIO_IN);
     gpio_pull_up(BUTTON_PIN);
     
     bool led = false;

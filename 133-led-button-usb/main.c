@@ -26,6 +26,7 @@ void set_led(bool on)
 int main()
 {
     stdio_init_all();
+    
     gpio_init(LED_PIN);
     gpio_set_dir(LED_PIN, GPIO_OUT);
     
@@ -43,7 +44,7 @@ int main()
            if (previous == true && current == false)
            {
                led = !led;
-               gpio_put(LED_PIN, led);
+               set_led(led);
            }
 
            previous = current;
